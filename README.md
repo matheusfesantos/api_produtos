@@ -4,8 +4,6 @@ Este projeto é uma API RESTful desenvolvida com **Spring Boot**. Ela permite qu
 
 ## Foto da API Funcionando
 
-Aqui está uma imagem mostrando a API em funcionamento:
-
 ![API Funcionando](https://drive.google.com/uc?id=1K2cRUAcsGZjrrXXSr3oGCFnmBfIVXv3n)
 
 ## Endpoints
