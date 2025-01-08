@@ -1,0 +1,27 @@
+Nome: PlayStation 5
+Descricao: video-game
+Preco: 3999.99
+
+Nome: Xbox One
+Descricao: video-game
+Preco: 3599.99
+
+Nome: Nintendo Switch
+Descricao: video-game
+Preco: 2999.99
+
+Nome: Xbox Series X
+Descricao: video-game
+Preco: 4999.99
+
+Nome: PlayStation 4
+Descricao: video-game
+Preco: 2799.99
+
+Nome: Nintendo Switch OLED
+Descricao: video-game
+Preco: 3499.99
+
+Nome: PlayStation 5 Digital Edition
+Descricao: video-game
+Preco: 3499.99
