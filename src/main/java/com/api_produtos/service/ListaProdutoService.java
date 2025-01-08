@@ -5,26 +5,31 @@ import com.api_produtos.construtor.Produto;
 import java.io.*;
 import java.util.*;
 
-public class ProdutoService {
+public class ListaProdutoService {
     private Map<String, Produto> produtos;
 
-    public ProdutoService() {
+    public ListaProdutoService() {
         this.produtos = new HashMap<>();
         carregarProdutosDoArquivo();
     }
 
     private void carregarProdutosDoArquivo() {
-        try (BufferedReader br = new BufferedReader(new FileReader
-                ("C:\\Users\\matheus.fgs\\Desktop\\api_produtos\\src\\main\\products\\products.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(
+                "C:\\Users\\matheus.fgs\\Desktop\\api_produtos" +
+                        "\\src\\main\\products\\products.txt"))) {
 
             String linha;
             Produto produto = null;
 
             while ((linha = br.readLine()) != null) {
-                if (linha.startsWith("Nome:")) {
+                linha = linha.trim();
+                if (linha.isEmpty()) {
+                    // Salva o produto anterior quando encontra uma linha em branco
                     if (produto != null) {
                         produtos.put(produto.getNome(), produto);
                     }
+                    produto = null;
+                } else if (linha.startsWith("Nome:")) {
                     produto = new Produto();
                     produto.setNome(linha.substring(5).trim());
                 } else if (linha.startsWith("Descricao:")) {
@@ -37,6 +42,7 @@ public class ProdutoService {
                     }
                 }
             }
+            // Adiciona o último produto, se existir
             if (produto != null) {
                 produtos.put(produto.getNome(), produto);
             }
@@ -46,11 +52,11 @@ public class ProdutoService {
         }
     }
 
-    public List<Produto> buscarTodosOsProdutos() {
-        return new ArrayList<>(produtos.values());
-    }
-
     public Produto buscarProdutoPorNome(String nome) {
         return produtos.get(nome);
+    }
+
+    public List<Produto> buscarTodosProdutos() {
+        return new ArrayList<>(produtos.values());
     }
 }

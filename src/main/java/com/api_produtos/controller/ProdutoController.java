@@ -2,28 +2,32 @@ package com.api_produtos.controller;
 
 import com.api_produtos.construtor.Produto;
 import com.api_produtos.exceptions.ProdutoNaoEncontradoException;
-import com.api_produtos.service.ProdutoService;
+import com.api_produtos.service.ListaProdutoService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/produtos")
 public class ProdutoController {
 
-    private final ProdutoService produtoService;
+    private final ListaProdutoService produtoService;
 
     public ProdutoController() {
-        this.produtoService = new ProdutoService();
+        this.produtoService = new ListaProdutoService();
     }
 
     @GetMapping("/buscar")
-    public Produto buscarProduto(@RequestBody Map<String, String> request) {
-        String nomeProduto = request.get("nome");
-        Produto produto = produtoService.buscarProdutoPorNome(nomeProduto);
+    public Produto buscarProduto(@RequestParam String nome) {
+        Produto produto = produtoService.buscarProdutoPorNome(nome);
         if (produto == null) {
-            throw new ProdutoNaoEncontradoException(nomeProduto);
+            throw new ProdutoNaoEncontradoException(nome);
         }
         return produto;
+    }
+
+    @GetMapping("/todos")
+    public List<Produto> buscarTodosProdutos() {
+        return produtoService.buscarTodosProdutos();
     }
 }
