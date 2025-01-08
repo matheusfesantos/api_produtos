@@ -8,7 +8,7 @@ Este projeto é uma API RESTful desenvolvida com **Spring Boot**. Ela permite qu
 
 ##
 
-![API Funcionando](https://drive.google.com/uc?id=1K2cRUAcsGZjrrXXSr3oGCFnmBfIVXv3n)
+![API Funcionando](https://drive.google.com/file/d/1q-yJ19TpWTaIA8bXZa90EM5VfqblVm1B/view?usp=drive_link)
 
 ## Endpoints
 
