@@ -1,4 +1,4 @@
-package com.api_futebol;
+package com.api_produtos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

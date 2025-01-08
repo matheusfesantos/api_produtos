@@ -1,4 +1,4 @@
-package com.api_futebol;
+package com.api_produtos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

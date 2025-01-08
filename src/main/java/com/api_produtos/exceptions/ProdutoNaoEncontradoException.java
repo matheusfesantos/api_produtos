@@ -1,4 +1,4 @@
-package com.api_futebol.exceptions;
+package com.api_produtos.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

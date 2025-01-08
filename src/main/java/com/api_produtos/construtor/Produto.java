@@ -1,4 +1,4 @@
-package com.api_futebol.construtor;
+package com.api_produtos.construtor;
 
 public class Produto {
     private String nome;

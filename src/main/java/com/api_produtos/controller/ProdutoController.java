@@ -1,8 +1,8 @@
-package com.api_futebol.controller;
+package com.api_produtos.controller;
 
-import com.api_futebol.construtor.Produto;
-import com.api_futebol.exceptions.ProdutoNaoEncontradoException;
-import com.api_futebol.service.ProdutoService;
+import com.api_produtos.construtor.Produto;
+import com.api_produtos.exceptions.ProdutoNaoEncontradoException;
+import com.api_produtos.service.ProdutoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;

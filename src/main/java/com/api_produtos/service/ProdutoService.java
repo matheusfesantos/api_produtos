@@ -1,6 +1,6 @@
-package com.api_futebol.service;
+package com.api_produtos.service;
 
-import com.api_futebol.construtor.Produto;
+import com.api_produtos.construtor.Produto;
 
 import java.io.*;
 import java.util.*;
