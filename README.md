@@ -45,13 +45,21 @@ O arquivo **`products.txt`** armazena os produtos no formato CSV, com três camp
 Exemplo de conteúdo do arquivo:
 
 ```
-PlayStation 5,video-game,3999.99
-Xbox One,video-game,3599.99
-Nintendo Switch,video-game,2999.99
-Xbox Series X,video-game,4999.99
-PlayStation 4,video-game,2799.99
-Nintendo Switch OLED,video-game,3499.99
-PlayStation 5 Digital Edition,video-game,3499.99
+Nome: PlayStation 5
+Descricao: video-game
+Preco: 3999.99
+
+Nome: Xbox One
+Descricao: video-game
+Preco: 3599.99
+
+Nome: Nintendo Switch
+Descricao: video-game
+Preco: 2999.99
+
+Nome: Xbox Series X
+Descricao: video-game
+Preco: 4999.99
 ```
 
 ## Tratamento de Erros
