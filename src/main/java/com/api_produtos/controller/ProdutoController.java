@@ -36,7 +36,7 @@ public class ProdutoController {
         String nome = produtoRequest.getNome();
 
         if (nome == null || nome.trim().isEmpty()) {
-            throw new IllegalArgumentException("Nome do produto não pode ser vazio");
+            throw new VariaveisNaoPodemSerNulas(nome);
         }
 
         Produto produtoBuscar;
@@ -61,7 +61,7 @@ public class ProdutoController {
         double preco = produto.getPreco();
 
         if (nome == null || descricao == null || preco == 0){
-            throw new VariaveisNaoPodemSerNulas(nome, descricao, preco);
+            throw new VariaveisNaoPodemSerNulas(nome);
         }
 
         Produto produtoAdicionar;
