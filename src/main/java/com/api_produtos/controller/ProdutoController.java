@@ -51,6 +51,7 @@ public class ProdutoController {
     @GetMapping("/todos")
     public List<Produto> buscarTodosProdutos() {
         return listaProdutoService.buscarTodosProdutos();
+
     }
 
     @PostMapping("/adicionar")
@@ -66,6 +67,6 @@ public class ProdutoController {
         Produto produtoAdicionar = adicionarProdutoService.adicionarProduto
                 (nome, descricao, preco);
 
-        return null;
+        return produtoAdicionar;
     }
 }

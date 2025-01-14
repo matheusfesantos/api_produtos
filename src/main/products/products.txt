@@ -1,27 +1,39 @@
-Nome: PlayStation 5
-Descricao: video-game
-Preco: 3999.99
+Nome: PlayStation 2
+Descricao: Video-game
+Preco: 660.0
 
-Nome: Xbox One
-Descricao: video-game
-Preco: 3599.99
+Nome: PlayStation 1
+Descricao: Video-game
+Preco: 300.0
+
+Nome: Xbox 360
+Descricao: Video-game
+Preco: 900.0
 
 Nome: Nintendo Switch
-Descricao: video-game
-Preco: 2999.99
+Descricao: Video-game
+Preco: 2500.0
 
-Nome: Xbox Series X
-Descricao: video-game
-Preco: 4999.99
+Nome: Sega Genesis
+Descricao: Video-game retro
+Preco: 450.0
+
+Nome: Super Nintendo
+Descricao: Video-game retro
+Preco: 500.0
 
 Nome: PlayStation 4
-Descricao: video-game
-Preco: 2799.99
+Descricao: Video-game
+Preco: 1700.0
 
-Nome: Nintendo Switch OLED
-Descricao: video-game
-Preco: 3499.99
+Nome: PlayStation 5
+Descricao: Video-game
+Preco: 4500.0
 
-Nome: PlayStation 5 Digital Edition
-Descricao: video-game
-Preco: 3499.99
+Nome: Xbox One
+Descricao: Video-game
+Preco: 1200.0
+
+Nome: Nintendo 64
+Descricao: Video-game retro
+Preco: 700.0

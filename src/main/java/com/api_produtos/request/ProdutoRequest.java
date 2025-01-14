@@ -3,9 +3,9 @@ package com.api_produtos.request;
 public class ProdutoRequest {
     private String nome;
     private String descricao;
-    private Double preco;
+    private double preco;
 
-    public void setNome(String nome, String descricao, Double preco) {
+    public void setNome(String nome, String descricao, double preco) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;

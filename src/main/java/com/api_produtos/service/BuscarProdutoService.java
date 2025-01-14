@@ -7,18 +7,18 @@ import java.io.*;
 import java.util.*;
 
 @Service
-public class BuscarProdutoService {
+public class BuscarProdutoService{
 
-    private final List<Produto> produtos;
+    private final Map<String, Produto> produtos;
 
     public BuscarProdutoService() {
-        this.produtos = new ArrayList<>();
+        this.produtos = new HashMap<>();
         carregarProdutosDoArquivo();
     }
 
-    private void carregarProdutosDoArquivo() {
+    private void carregarProdutosDoArquivo(){
         try (BufferedReader br = new BufferedReader(new FileReader(
-                "src/main/products/products.txt"))) {
+                "src\\main\\products\\products.txt"))) {
 
             String linha;
             Produto produto = null;
@@ -28,7 +28,7 @@ public class BuscarProdutoService {
 
                 if (linha.isEmpty()) {
                     if (produto != null) {
-                        produtos.add(produto);
+                        produtos.put(produto.getNome(), produto);
                     }
                     produto = null;
 
@@ -48,21 +48,12 @@ public class BuscarProdutoService {
                 }
             }
 
-            if (produto != null) {
-                produtos.add(produto);
-            }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public Produto buscarProdutoPorNome(String nome) {
-        for (Produto produto : produtos) {
-            if (produto.getNome().equalsIgnoreCase(nome)) {
-                return produto;
-            }
-        }
-        return null;
+        return produtos.get(nome);
     }
 }
