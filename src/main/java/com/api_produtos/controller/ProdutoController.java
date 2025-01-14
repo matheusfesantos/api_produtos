@@ -8,7 +8,6 @@ import com.api_produtos.service.AdicionarProdutoService;
 import com.api_produtos.service.BuscarProdutoService;
 import com.api_produtos.service.ListaProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jackson.JsonMixinModuleEntries;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,7 +39,8 @@ public class ProdutoController {
             throw new IllegalArgumentException("Nome do produto não pode ser vazio");
         }
 
-        Produto produtoBuscar = buscarProdutoService.buscarProdutoPorNome(nome);
+        Produto produtoBuscar;
+        produtoBuscar = buscarProdutoService.buscarProdutoPorNome(nome);
 
         if (produtoBuscar == null) {
             throw new ProdutoNaoEncontradoException(nome);
@@ -64,7 +64,8 @@ public class ProdutoController {
             throw new VariaveisNaoPodemSerNulas(nome, descricao, preco);
         }
 
-        Produto produtoAdicionar = adicionarProdutoService.adicionarProduto
+        Produto produtoAdicionar;
+        produtoAdicionar = adicionarProdutoService.adicionarProduto
                 (nome, descricao, preco);
 
         return produtoAdicionar;
