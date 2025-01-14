@@ -7,7 +7,8 @@ import java.io.*;
 import java.util.*;
 
 @Service
-public class BuscarProdutoService {
+public class BuscarProdutoService{
+
     private final Map<String, Produto> produtos;
 
     public BuscarProdutoService() {
@@ -15,7 +16,7 @@ public class BuscarProdutoService {
         carregarProdutosDoArquivo();
     }
 
-    private void carregarProdutosDoArquivo() {
+    private void carregarProdutosDoArquivo(){
         try (BufferedReader br = new BufferedReader(new FileReader(
                 "src\\main\\products\\products.txt"))) {
 
@@ -24,18 +25,22 @@ public class BuscarProdutoService {
 
             while ((linha = br.readLine()) != null) {
                 linha = linha.trim();
+
                 if (linha.isEmpty()) {
                     if (produto != null) {
                         produtos.put(produto.getNome(), produto);
                     }
                     produto = null;
+
                 } else if (linha.startsWith("Nome:")) {
                     produto = new Produto();
                     produto.setNome(linha.substring(5).trim());
+
                 } else if (linha.startsWith("Descricao:")) {
                     if (produto != null) {
                         produto.setDescricao(linha.substring(10).trim());
                     }
+
                 } else if (linha.startsWith("Preco:")) {
                     if (produto != null) {
                         produto.setPreco(Double.parseDouble(linha.substring(6).trim()));

@@ -23,7 +23,8 @@ public class ListaProdutoService {
 
     private void carregarProdutosDoArquivo() {
         try (BufferedReader br = new BufferedReader(new FileReader(
-                "src\\main\\products\\products.txt"))) {
+                "src\\main\\products\\products.txt"))){
+
             String linha;
             Produto produto = null;
 
